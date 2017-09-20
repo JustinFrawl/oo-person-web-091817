@@ -65,23 +65,23 @@ def get_paid(salary)
 end
 
 def take_bath
-  @hygiene += 4
-  self.hygiene=(hygiene)
+  # @hygiene += 4
+  self.hygiene=(self.hygiene+4)
   "♪ Rub-a-dub just relaxing in the tub ♫"
 end
 
 def work_out
-  @hygiene -= 3
-  self.hygiene=(hygiene)
-  @happiness += 2
-  self.happiness=(happiness)
+  #@hygiene -= 3
+  self.hygiene=(self.hygiene-3)
+  #@happiness += 2
+  self.happiness=(self.happiness+2)
   "♪ another one bites the dust ♫"
 end
 
 def call_friend(person)
-  @happiness += 3
-  self.happiness=(happiness)
-  person.happiness += 3
+  #@happiness += 3
+  self.happiness=(self.happiness+3)
+  person.happiness = (person.happiness+3)
   # happiness=(person.happiness)
   # happiness=(person)
   "Hi #{person.name}! It's #{name}. How are you?"
@@ -89,9 +89,9 @@ end
 
 def start_conversation(person, topic)
   if topic == "politics"
-    @happiness -= 2
-    self.happiness=(happiness)
-    person.happiness -= 2
+    # @happiness -= 2
+    self.happiness=(self.happiness-2)
+    person.happiness = (person.happiness-2)
     #happiness=(person.happiness)
     "blah blah partisan blah lobbyist"
   elsif topic == "weather"
